@@ -1,4 +1,4 @@
-#Change Log#
+# Change Log #
 
 Team membership:  Braden D'Eith(Captain) & Jason Chan  (Mate)
 Team conventions: Allman notation, markdown for changelog, must edit changelog after every change
