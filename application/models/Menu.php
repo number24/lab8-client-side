@@ -6,7 +6,7 @@
 define('REST_SERVER', 'http://backend.local');  // the REST server host
 define('REST_PORT', $_SERVER['SERVER_PORT']);   // the port you are running the server on
 
-class Menu extends MY_Model {
+class Menu extends CI_Model {
 
     // constructor
     function __construct() {
@@ -27,17 +27,17 @@ class Menu extends MY_Model {
         ];
         return $config;
     }
-
+    /*
     /**
      * Returns all the ports from the REST server
      * @return the ports
-     */
+     *
     function getPorts() {
         $this->rest->initialize(array('server' => REST_SERVER));
         $this->rest->option(CURLOPT_PORT, REST_PORT);
         $result = $this->rest->get('maintenance');
         return $result;
-    }
+    }*/
 
     // Return all records as an array of objects
     function all() {
@@ -76,7 +76,11 @@ class Menu extends MY_Model {
         $this->rest->initialize(array('server' => REST_SERVER));
         $this->rest->option(CURLOPT_PORT, REST_PORT);
         $result = $this->rest->get('/maintenance/item/id/' . $key);
-        return !empty($result);
+        //return !empty($result);
+        if (isset($result->error))
+            return false;
+        else
+            return true;
     }
 
     // Update a record in the DB
