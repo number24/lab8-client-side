@@ -6,7 +6,7 @@ Changelog format: [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdo
 
 ## Version 1.1.0 ##
 
-### Added 04-06-17 ###
+### Added 04-08-17 ###
 -  Fixed minor bugs on frontend diner
 
 ## Version 1.0.1 ##
